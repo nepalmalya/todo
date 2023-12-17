@@ -1,0 +1,236 @@
+.wrapper {
+    width: 450px;
+    background: #fff0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 6px #32323257;
+    max-height: 800px;
+    height: 280px;
+    backdrop-filter: blur(4px);
+}
+  
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/pexels-gdtography-911738.jpg);
+    background-repeat: no-repeat;
+    height: 97vh;
+    object-fit: cover;
+    background-size: 100%;
+    overflow: hidden;
+}
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* heading */
+  .heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 23px;
+}
+  
+  /* TO DO BOX */
+  #todoItems {
+    border:1px solid lightgrey;
+    background: #fff;
+    box-shadow:
+      0 1px 1px rgba(0,0,0,0.15),
+      0 10px 0 -5px #eee,
+      0 10px 1px -4px rgba(0,0,0,0.15),
+      0 20px 0 -10px #eee,
+      0 20px 1px -9px rgba(0,0,0,0.15);
+    padding-inline-start: 0;
+  }
+  
+  #todoItems li {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 0.5px solid lightgrey;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+  #todoTextInput {
+    outline: none;
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: roboto;
+    border: 1px solid white;
+    width:80%;
+    background-color:white;
+  }
+  
+  #textInput {
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #f9f9f9;
+    margin-bottom: -17px;
+    box-shadow: 0px 0px 6px #5c5a5a42;
+    border-radius: 7px;
+}
+  
+  /* ADD A TODO INPUT  */
+  ::-webkit-input-placeholder {
+     color:black;
+     font-size:16px;
+  }
+  
+  /*  AMOUNT OF TODOS TODAY */
+  #todosToday {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+  
+   /* REMOVES BLUE BORDER FROM ADD TODO BAR */
+  input {
+    outline:none;
+  }
+  
+   /* DELETE BUTTON */
+  .deleteButton {
+    border: 0px solid white;
+    background-color: white;
+    width: 10%;
+  }
+  
+  
+  /* TOGGLE */
+  .fas, .far, .fa-circle:before, .fa-check-circle:before {
+    font-size: 20px;
+    color: lightgrey;
+    margin-left:3.5%;
+    width:10%;
+  }
+  
+  .fa-times:before {
+    font-size:15px;
+     width:10%;
+  }
+  
+  
+  
+  .box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    transition:  10px ease-in-out;
+    animation: up 3s infinite;
+    
+  }
+  .box-2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(219, 39, 39);
+    transition:  10px ease-in-out;
+    animation: left 5s infinite;
+    
+  }
+  .box-3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(224, 155, 155);
+    transition: all 10px ease-in-out;
+    animation: down 6s infinite;
+    
+  }
+
+  @keyframes up{
+    0%{
+        top: 100%;
+        background:transparent;
+    }
+    30%{
+        top: 50%;
+        transform: translate(-300px , 500px);
+        transform: rotate(270deg);
+        border-radius: 50%;
+        background: transparent;
+
+    }
+    100%{
+        top: 5%;
+        transform: translate(300px , -200px);
+        transform: rotate(360deg);
+        background: transparent;
+
+    }
+  }
+
+
+  @keyframes down {
+    0%{
+        bottom: 20%;
+        transform: translate(-400px , 0);
+        background-color: red;
+    }
+    30%{
+        bottom: 40%;
+        transform: rotate(360deg);
+        border-radius: 50%;
+        transform: translate(100px , 200px);
+        background-color: blue;
+
+    }
+    100%{
+        bottom: 100%;
+        transform: translate(500px , 60);
+        background-color: green;
+
+    }
+  }
+
+  @keyframes left {
+    0%{
+        left: 0%;
+        top: 50%;
+        border-radius: 20%;
+        background-color: rgb(198, 83, 83);
+    }
+    30%{
+        left: 20%;
+        transform: rotate(360deg);
+        border-radius: 30%;
+        transform: translate(100px , -200px);
+        background: linear-gradient(red, white);
+     
+
+    }
+
+
+50%{
+    left: 50%;
+    border-radius: 25%;
+    background: linear-gradient(white, green);
+}
+
+    100%{
+        left: 90%;
+        border-radius: 50%;
+        transform: translate(200px , 90);
+        background: linear-gradient(white, red);
+        background-color: rgb(36, 126, 36);
+        transition: .3s;
+
+    }
+  }
+
+  .heading:hover{
+    scale: 1.5;
+    transition: .8s;
+  }
